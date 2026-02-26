@@ -43,7 +43,8 @@ Skills
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+  {% assign publications_sorted = site.publications | sort: "date" %}
+  <ul>{% for post in publications_sorted %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
